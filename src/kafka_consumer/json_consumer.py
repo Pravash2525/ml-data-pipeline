@@ -12,8 +12,7 @@ from src.database.mongodb import MongodbOperation
 
 def consumer_using_sample_file(topic,file_path):
     schema_str = Generic.get_schema_to_produce_consume_data(file_path=file_path)
-    json_deserializer = JSONDeserializer(schema_str,
-                                         from_dict=Generic.dict_to_object)
+    json_deserializer = JSONDeserializer(schema_str, from_dict=Generic.dict_to_object)
 
     consumer_conf = sasl_conf()
     consumer_conf.update({
@@ -22,7 +21,6 @@ def consumer_using_sample_file(topic,file_path):
 
     consumer = Consumer(consumer_conf)
     consumer.subscribe([topic])
-
     mongodb = MongodbOperation()
     records = []
     x = 0

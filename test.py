@@ -9,8 +9,6 @@
 #     SCHEMA_REGISTRY_API_KEY = os.getenv('SCHEMA_REGISTRY_API_KEY',None)
 #     SCHEMA_REGISTRY_API_SECRET = os.getenv('SCHEMA_REGISTRY_API_SECRET',None)
 
-
-
 #     print(API_KEY)
 
 

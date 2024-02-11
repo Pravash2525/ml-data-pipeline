@@ -77,6 +77,7 @@ def product_data_using_file(topic,file_path):
     print("Producing user records to topic {}. ^C to exit.".format(topic))
     # while True:
     # Serve on_delivery callbacks from previous calls to produce()
+    
     producer.poll(0.0)
     try:
         for instance in Generic.get_object(file_path=file_path):
@@ -88,6 +89,7 @@ def product_data_using_file(topic,file_path):
                              on_delivery=delivery_report)
             print("\nFlushing records...")
             producer.flush()
+            
     except KeyboardInterrupt:
         pass
     except ValueError:

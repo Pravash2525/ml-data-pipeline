@@ -3,7 +3,6 @@ import pandas as pd
 import json
 
 class Generic:
-
     def __init__(self, record: dict):
         for k, v in record.items():
             setattr(self, k, v)
@@ -51,10 +50,7 @@ class Generic:
                         }
             )
 
-        schema.update({"fields":fields})
-
-
-    
+        schema.update({"fields":fields})    
         json.dump(schema,open("schema.json","w"))
         schema = json.dumps(schema)
 
@@ -75,6 +71,7 @@ class Generic:
             "properties": dict(),
             "title": "SampleRecord",
             "type": "object"})
+        
         for column in columns:
             schema["properties"].update(
                 {
@@ -87,7 +84,6 @@ class Generic:
         
     
         schema = json.dumps(schema)
-
         print(schema)
         return schema
         

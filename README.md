@@ -1,6 +1,5 @@
 # confluent-kafka-python
 
-
 This repo help us to know how to publish and consume data to and from kafka confluent in json format.
 
 Step 1: Create a conda environment
@@ -24,9 +23,8 @@ pip install -r requirements.txt
 
 Below repo help you to obtain requried credentials
 ```
-https://github.com/Big-Data-01/confluent-tutorial.git
+https://github.com/Pravash2525/ml-data-pipeline.git
 ```
-
 
 Cluster Environment Variable
 ```
@@ -35,13 +33,13 @@ API_SECRET_KEY
 BOOTSTRAP_SERVER
 ```
 
-
 Schema related Environment Variable
 ```
 SCHEMA_REGISTRY_API_KEY
 SCHEMA_REGISTRY_API_SECRET
 ENDPOINT_SCHEMA_URL
 ```
+
 Data base related Environment Variable
 ```
 MONGO_DB_URL
@@ -53,13 +51,15 @@ MONGO_DB_URL
 Create .env file in root dir of your project if it is not available
 paste the below content and update the credentials
 ```
-API_KEY=asgdakhlsa
-API_SECRET_KEY=dsdfsdf
-BOOTSTRAP_SERVER=sdfasd
-SCHEMA_REGISTRY_API_KEY=sdfsaf
-SCHEMA_REGISTRY_API_SECRET=sdfasdf
-ENDPOINT_SCHEMA_URL=sdafasf
-MONGO_DB_URL=sdfasdfas
+API_KEY = asgdakhlsa
+API_SECRET_KEY = dsdfsdf
+BOOTSTRAP_SERVER = sdfasd
+
+SCHEMA_REGISTRY_API_KEY = sdfsaf
+SCHEMA_REGISTRY_API_SECRET = sdfasdf
+ENDPOINT_SCHEMA_URL = sdafasf
+
+MONGO_DB_URL = sdfasdfas
 ```
 
 Build docker image
